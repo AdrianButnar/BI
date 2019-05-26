@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="76"
-  DTS:VersionGUID="{7C01BFD4-338A-4CA7-856F-AEC39873F91F}">
+  DTS:VersionBuild="84"
+  DTS:VersionGUID="{F33F0A58-AA94-4973-A352-B455E861B1A7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1849,13 +1849,13 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\GooglePlay"
+      DTS:refId="Package\GooglePlayApps File to db table 1"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{B856C711-AB56-4755-B559-C6EFA14F2A2B}"
+      DTS:DTSID="{7c103de1-97ac-4e23-ad1b-981e953e67b3}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="GooglePlay"
+      DTS:ObjectName="GooglePlayApps File to db table 1"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -1863,7 +1863,693 @@
           version="1">
           <components>
             <component
-              refId="Package\GooglePlay\Flat File Source 1"
+              refId="Package\GooglePlayApps File to db table 1\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\GooglePlayApps File to db table 1\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager Apps]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager Apps]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[App]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[App]"
+                      length="350"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[App]"
+                      name="App"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Category]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      length="150"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Rating]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Rating]"
+                      length="50"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Rating]"
+                      name="Rating"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Reviews]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Reviews]"
+                      length="150"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Reviews]"
+                      name="Reviews"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Size]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Size]"
+                      length="150"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Size]"
+                      name="Size"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Installs]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Installs]"
+                      length="150"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Installs]"
+                      name="Installs"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Type]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Type]"
+                      length="150"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Type]"
+                      name="Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Price]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Price]"
+                      length="150"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Price]"
+                      name="Price"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Content Rating]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Content Rating]"
+                      length="150"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Content Rating]"
+                      name="Content Rating"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Genres]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Genres]"
+                      length="150"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Genres]"
+                      name="Genres"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Last Updated]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                      length="150"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Last Updated]"
+                      name="Last Updated"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Current Ver]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Current Ver]"
+                      length="150"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Current Ver]"
+                      name="Current Ver"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Android Ver]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Android Ver]"
+                      length="350"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Android Ver]"
+                      name="Android Ver"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[App]"
+                      dataType="wstr"
+                      length="350"
+                      name="App" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      dataType="wstr"
+                      length="150"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Rating]"
+                      dataType="wstr"
+                      length="50"
+                      name="Rating" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Reviews]"
+                      dataType="wstr"
+                      length="150"
+                      name="Reviews" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Size]"
+                      dataType="wstr"
+                      length="150"
+                      name="Size" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Installs]"
+                      dataType="wstr"
+                      length="150"
+                      name="Installs" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Type]"
+                      dataType="wstr"
+                      length="150"
+                      name="Type" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Price]"
+                      dataType="wstr"
+                      length="150"
+                      name="Price" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Content Rating]"
+                      dataType="wstr"
+                      length="150"
+                      name="Content Rating" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Genres]"
+                      dataType="wstr"
+                      length="150"
+                      name="Genres" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                      dataType="wstr"
+                      length="150"
+                      name="Last Updated" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Current Ver]"
+                      dataType="wstr"
+                      length="150"
+                      name="Current Ver" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Android Ver]"
+                      dataType="wstr"
+                      length="350"
+                      name="Android Ver" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination 1"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[GooglePlayApps]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.SSISProject]"
+                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.SSISProject]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[App]"
+                      cachedDataType="wstr"
+                      cachedLength="350"
+                      cachedName="App"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[App]"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[App]" />
+                    <inputColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Rating]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Rating"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Rating]"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Rating]" />
+                    <inputColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Reviews]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Reviews"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Reviews]"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Reviews]" />
+                    <inputColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Size]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Size"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Size]"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Size]" />
+                    <inputColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Installs]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Installs"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Installs]"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Installs]" />
+                    <inputColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Type]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Type"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Type]"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Type]" />
+                    <inputColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Price]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Price"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Price]"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Price]" />
+                    <inputColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Content Rating]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Content Rating"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Content Rating]"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Content Rating]" />
+                    <inputColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Genres]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Genres"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Genres]"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Genres]" />
+                    <inputColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Last Updated]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Last Updated"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Last Updated]"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Last Updated]" />
+                    <inputColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Current Ver]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Current Ver"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Current Ver]"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Current Ver]" />
+                    <inputColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Android Ver]"
+                      cachedDataType="wstr"
+                      cachedLength="350"
+                      cachedName="Android Ver"
+                      externalMetadataColumnId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Android Ver]"
+                      lineageId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output].Columns[Android Ver]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[App]"
+                      dataType="wstr"
+                      length="500"
+                      name="App" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      dataType="wstr"
+                      length="500"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Rating]"
+                      dataType="wstr"
+                      length="500"
+                      name="Rating" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Reviews]"
+                      dataType="wstr"
+                      length="500"
+                      name="Reviews" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Size]"
+                      dataType="wstr"
+                      length="500"
+                      name="Size" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Installs]"
+                      dataType="wstr"
+                      length="500"
+                      name="Installs" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Type]"
+                      dataType="wstr"
+                      length="500"
+                      name="Type" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Price]"
+                      dataType="wstr"
+                      length="500"
+                      name="Price" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Content Rating]"
+                      dataType="wstr"
+                      length="500"
+                      name="Content Rating" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Genres]"
+                      dataType="wstr"
+                      length="500"
+                      name="Genres" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Last Updated]"
+                      dataType="dbDate"
+                      name="Last Updated" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Current Ver]"
+                      dataType="wstr"
+                      length="500"
+                      name="Current Ver" />
+                    <externalMetadataColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Android Ver]"
+                      dataType="wstr"
+                      length="500"
+                      name="Android Ver" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\GooglePlayApps File to db table 1.Paths[Flat File Source Output]"
+              endId="Package\GooglePlayApps File to db table 1\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\GooglePlayApps File to db table 1\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\GooglePlayReviews File to db table"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{B856C711-AB56-4755-B559-C6EFA14F2A2B}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="GooglePlayReviews File to db table"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\GooglePlayReviews File to db table\Flat File Source 1"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
@@ -1883,24 +2569,24 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\GooglePlay\Flat File Source 1.Connections[FlatFileConnection]"
+                  refId="Package\GooglePlayReviews File to db table\Flat File Source 1.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[uFlat File Connection Manager 4]"
                   connectionManagerRefId="Package.ConnectionManagers[uFlat File Connection Manager 4]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output]"
+                  refId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].Columns[App]"
+                      refId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].Columns[App]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[App]"
+                      externalMetadataColumnId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[App]"
                       length="500"
-                      lineageId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].Columns[App]"
+                      lineageId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].Columns[App]"
                       name="App"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1915,13 +2601,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].Columns[Translated_Review]"
+                      refId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].Columns[Translated_Review]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Translated_Review]"
+                      externalMetadataColumnId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Translated_Review]"
                       length="500"
-                      lineageId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].Columns[Translated_Review]"
+                      lineageId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].Columns[Translated_Review]"
                       name="Translated_Review"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1936,13 +2622,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].Columns[Sentiment]"
+                      refId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].Columns[Sentiment]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Sentiment]"
+                      externalMetadataColumnId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Sentiment]"
                       length="500"
-                      lineageId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].Columns[Sentiment]"
+                      lineageId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].Columns[Sentiment]"
                       name="Sentiment"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1957,13 +2643,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].Columns[Sentiment_Polarity]"
+                      refId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].Columns[Sentiment_Polarity]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Sentiment_Polarity]"
+                      externalMetadataColumnId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Sentiment_Polarity]"
                       length="500"
-                      lineageId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].Columns[Sentiment_Polarity]"
+                      lineageId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].Columns[Sentiment_Polarity]"
                       name="Sentiment_Polarity"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1978,13 +2664,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].Columns[Sentiment_Subjectivity]"
+                      refId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].Columns[Sentiment_Subjectivity]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Sentiment_Subjectivity]"
+                      externalMetadataColumnId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Sentiment_Subjectivity]"
                       length="500"
-                      lineageId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].Columns[Sentiment_Subjectivity]"
+                      lineageId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].Columns[Sentiment_Subjectivity]"
                       name="Sentiment_Subjectivity"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -2002,54 +2688,54 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[App]"
+                      refId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[App]"
                       dataType="wstr"
                       length="500"
                       name="App" />
                     <externalMetadataColumn
-                      refId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Translated_Review]"
+                      refId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Translated_Review]"
                       dataType="wstr"
                       length="500"
                       name="Translated_Review" />
                     <externalMetadataColumn
-                      refId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Sentiment]"
+                      refId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Sentiment]"
                       dataType="wstr"
                       length="500"
                       name="Sentiment" />
                     <externalMetadataColumn
-                      refId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Sentiment_Polarity]"
+                      refId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Sentiment_Polarity]"
                       dataType="wstr"
                       length="500"
                       name="Sentiment_Polarity" />
                     <externalMetadataColumn
-                      refId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Sentiment_Subjectivity]"
+                      refId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Sentiment_Subjectivity]"
                       dataType="wstr"
                       length="500"
                       name="Sentiment_Subjectivity" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Error Output]"
+                  refId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       codePage="1252"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2058,7 +2744,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\GooglePlay\OLE DB Destination 1"
+              refId="Package\GooglePlayReviews File to db table\OLE DB Destination 1"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -2115,7 +2801,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\GooglePlay\OLE DB Destination 1.Connections[OleDbConnection]"
+                  refId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.SSISProject]"
                   connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.SSISProject]"
                   description="The OLE DB runtime connection used to access the database."
@@ -2123,72 +2809,72 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\GooglePlay\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+                  refId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\GooglePlay\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[App]"
+                      refId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[App]"
                       cachedDataType="wstr"
                       cachedLength="500"
                       cachedName="App"
-                      externalMetadataColumnId="Package\GooglePlay\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[App]"
-                      lineageId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].Columns[App]" />
+                      externalMetadataColumnId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[App]"
+                      lineageId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].Columns[App]" />
                     <inputColumn
-                      refId="Package\GooglePlay\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Translated_Review]"
+                      refId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Translated_Review]"
                       cachedDataType="wstr"
                       cachedLength="500"
                       cachedName="Translated_Review"
-                      externalMetadataColumnId="Package\GooglePlay\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Translated_Review]"
-                      lineageId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].Columns[Translated_Review]" />
+                      externalMetadataColumnId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Translated_Review]"
+                      lineageId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].Columns[Translated_Review]" />
                     <inputColumn
-                      refId="Package\GooglePlay\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Sentiment]"
+                      refId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Sentiment]"
                       cachedDataType="wstr"
                       cachedLength="500"
                       cachedName="Sentiment"
-                      externalMetadataColumnId="Package\GooglePlay\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Sentiment]"
-                      lineageId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].Columns[Sentiment]" />
+                      externalMetadataColumnId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Sentiment]"
+                      lineageId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].Columns[Sentiment]" />
                     <inputColumn
-                      refId="Package\GooglePlay\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Sentiment_Polarity]"
+                      refId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Sentiment_Polarity]"
                       cachedDataType="wstr"
                       cachedLength="500"
                       cachedName="Sentiment_Polarity"
-                      externalMetadataColumnId="Package\GooglePlay\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Sentiment_Polarity]"
-                      lineageId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].Columns[Sentiment_Polarity]" />
+                      externalMetadataColumnId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Sentiment_Polarity]"
+                      lineageId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].Columns[Sentiment_Polarity]" />
                     <inputColumn
-                      refId="Package\GooglePlay\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Sentiment_Subjectivity]"
+                      refId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Sentiment_Subjectivity]"
                       cachedDataType="wstr"
                       cachedLength="500"
                       cachedName="Sentiment_Subjectivity"
-                      externalMetadataColumnId="Package\GooglePlay\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Sentiment_Subjectivity]"
-                      lineageId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output].Columns[Sentiment_Subjectivity]" />
+                      externalMetadataColumnId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Sentiment_Subjectivity]"
+                      lineageId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output].Columns[Sentiment_Subjectivity]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\GooglePlay\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[App]"
+                      refId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[App]"
                       dataType="wstr"
                       length="500"
                       name="App" />
                     <externalMetadataColumn
-                      refId="Package\GooglePlay\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Translated_Review]"
+                      refId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Translated_Review]"
                       dataType="wstr"
                       length="500"
                       name="Translated_Review" />
                     <externalMetadataColumn
-                      refId="Package\GooglePlay\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Sentiment]"
+                      refId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Sentiment]"
                       dataType="wstr"
                       length="500"
                       name="Sentiment" />
                     <externalMetadataColumn
-                      refId="Package\GooglePlay\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Sentiment_Polarity]"
+                      refId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Sentiment_Polarity]"
                       dataType="wstr"
                       length="500"
                       name="Sentiment_Polarity" />
                     <externalMetadataColumn
-                      refId="Package\GooglePlay\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Sentiment_Subjectivity]"
+                      refId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Sentiment_Subjectivity]"
                       dataType="wstr"
                       length="500"
                       name="Sentiment_Subjectivity" />
@@ -2197,22 +2883,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\GooglePlay\OLE DB Destination 1.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\GooglePlay\OLE DB Destination 1.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\GooglePlay\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\GooglePlay\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\GooglePlay\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\GooglePlay\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2223,10 +2909,10 @@
           </components>
           <paths>
             <path
-              refId="Package\GooglePlay.Paths[Flat File Source Output]"
-              endId="Package\GooglePlay\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+              refId="Package\GooglePlayReviews File to db table.Paths[Flat File Source Output]"
+              endId="Package\GooglePlayReviews File to db table\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
               name="Flat File Source Output"
-              startId="Package\GooglePlay\Flat File Source 1.Outputs[Flat File Source Output]" />
+              startId="Package\GooglePlayReviews File to db table\Flat File Source 1.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2320,35 +3006,35 @@
                     <inputColumn
                       refId="Package\Insert into dim application\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Category]"
                       cachedDataType="wstr"
-                      cachedLength="350"
+                      cachedLength="500"
                       cachedName="Category"
                       externalMetadataColumnId="Package\Insert into dim application\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
                       lineageId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].Columns[Category]" />
                     <inputColumn
                       refId="Package\Insert into dim application\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Type]"
                       cachedDataType="wstr"
-                      cachedLength="350"
+                      cachedLength="500"
                       cachedName="Type"
                       externalMetadataColumnId="Package\Insert into dim application\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Type]"
                       lineageId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].Columns[Type]" />
                     <inputColumn
                       refId="Package\Insert into dim application\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[App]"
                       cachedDataType="wstr"
-                      cachedLength="350"
+                      cachedLength="500"
                       cachedName="App"
                       externalMetadataColumnId="Package\Insert into dim application\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
                       lineageId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].Columns[App]" />
                     <inputColumn
                       refId="Package\Insert into dim application\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Genres]"
                       cachedDataType="wstr"
-                      cachedLength="350"
+                      cachedLength="500"
                       cachedName="Genres"
                       externalMetadataColumnId="Package\Insert into dim application\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Genre]"
                       lineageId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].Columns[Genres]" />
                     <inputColumn
                       refId="Package\Insert into dim application\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Rating]"
                       cachedDataType="wstr"
-                      cachedLength="350"
+                      cachedLength="500"
                       cachedName="Rating"
                       externalMetadataColumnId="Package\Insert into dim application\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rating]"
                       lineageId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].Columns[Rating]" />
@@ -2479,7 +3165,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[App]"
-                      length="350"
+                      length="500"
                       lineageId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].Columns[App]"
                       name="App"
                       truncationRowDisposition="FailComponent" />
@@ -2489,7 +3175,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Category]"
-                      length="350"
+                      length="500"
                       lineageId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].Columns[Category]"
                       name="Category"
                       truncationRowDisposition="FailComponent" />
@@ -2499,7 +3185,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Type]"
-                      length="350"
+                      length="500"
                       lineageId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].Columns[Type]"
                       name="Type"
                       truncationRowDisposition="FailComponent" />
@@ -2509,7 +3195,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Rating]"
-                      length="350"
+                      length="500"
                       lineageId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].Columns[Rating]"
                       name="Rating"
                       truncationRowDisposition="FailComponent" />
@@ -2519,7 +3205,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Genres]"
-                      length="350"
+                      length="500"
                       lineageId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].Columns[Genres]"
                       name="Genres"
                       truncationRowDisposition="FailComponent" />
@@ -2529,67 +3215,66 @@
                     <externalMetadataColumn
                       refId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[App]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="App" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Category]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Category" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Rating]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Rating" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Reviews]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Reviews" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Size]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Size" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Installs]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Installs" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Type]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Type" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Price]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Price" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Content Rating]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Content Rating" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Genres]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Genres" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Last Updated]"
-                      dataType="wstr"
-                      length="350"
+                      dataType="dbDate"
                       name="Last Updated" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Current Ver]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Current Ver" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Android Ver]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Android Ver" />
                   </externalMetadataColumns>
                 </output>
@@ -2613,31 +3298,31 @@
                     <outputColumn
                       refId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[App]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       lineageId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[App]"
                       name="App" />
                     <outputColumn
                       refId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Category]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       lineageId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Category]"
                       name="Category" />
                     <outputColumn
                       refId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Type]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       lineageId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Type]"
                       name="Type" />
                     <outputColumn
                       refId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Rating]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       lineageId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Rating]"
                       name="Rating" />
                     <outputColumn
                       refId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Genres]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       lineageId="Package\Insert into dim application\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Genres]"
                       name="Genres" />
                   </outputColumns>
@@ -2744,22 +3429,21 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Insert into dim date\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Last Updated]"
-                      cachedDataType="wstr"
-                      cachedLength="350"
+                      cachedDataType="dbDate"
                       cachedName="Last Updated"
                       externalMetadataColumnId="Package\Insert into dim date\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LastUpdated]"
                       lineageId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].Columns[Last Updated]" />
                     <inputColumn
                       refId="Package\Insert into dim date\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Current Ver]"
                       cachedDataType="wstr"
-                      cachedLength="350"
+                      cachedLength="500"
                       cachedName="Current Ver"
                       externalMetadataColumnId="Package\Insert into dim date\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrentVersion]"
                       lineageId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].Columns[Current Ver]" />
                     <inputColumn
                       refId="Package\Insert into dim date\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Android Ver]"
                       cachedDataType="wstr"
-                      cachedLength="350"
+                      cachedLength="500"
                       cachedName="Android Ver"
                       externalMetadataColumnId="Package\Insert into dim date\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AndroidVersion]"
                       lineageId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].Columns[Android Ver]" />
@@ -2875,11 +3559,10 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].Columns[Last Updated]"
-                      dataType="wstr"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Last Updated]"
-                      length="350"
                       lineageId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].Columns[Last Updated]"
                       name="Last Updated"
                       truncationRowDisposition="FailComponent" />
@@ -2889,7 +3572,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Current Ver]"
-                      length="350"
+                      length="500"
                       lineageId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].Columns[Current Ver]"
                       name="Current Ver"
                       truncationRowDisposition="FailComponent" />
@@ -2899,7 +3582,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Android Ver]"
-                      length="350"
+                      length="500"
                       lineageId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].Columns[Android Ver]"
                       name="Android Ver"
                       truncationRowDisposition="FailComponent" />
@@ -2909,67 +3592,66 @@
                     <externalMetadataColumn
                       refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[App]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="App" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Category]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Category" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Rating]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Rating" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Reviews]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Reviews" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Size]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Size" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Installs]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Installs" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Type]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Type" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Price]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Price" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Content Rating]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Content Rating" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Genres]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Genres" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Last Updated]"
-                      dataType="wstr"
-                      length="350"
+                      dataType="dbDate"
                       name="Last Updated" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Current Ver]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Current Ver" />
                     <externalMetadataColumn
                       refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Android Ver]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Android Ver" />
                   </externalMetadataColumns>
                 </output>
@@ -2992,20 +3674,19 @@
                       specialFlags="2" />
                     <outputColumn
                       refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Last Updated]"
-                      dataType="wstr"
-                      length="350"
+                      dataType="dbDate"
                       lineageId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Last Updated]"
                       name="Last Updated" />
                     <outputColumn
                       refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Current Ver]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       lineageId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Current Ver]"
                       name="Current Ver" />
                     <outputColumn
                       refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Android Ver]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       lineageId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Android Ver]"
                       name="Android Ver" />
                   </outputColumns>
@@ -3374,13 +4055,14 @@
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[DimDate]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[DimDate]) [refTable]
+where [refTable].[LastUpdated] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -3395,7 +4077,7 @@
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
+                  typeConverter="LookupNoMatchBehavior">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -3411,12 +4093,12 @@
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml"></property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Did" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LastUpdated" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CurrentVersion" dataType="DT_WSTR" length="500" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AndroidVersion" dataType="DT_WSTR" length="500" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap"></property>
+                  name="ParameterMap">#{Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].Columns[Last Updated]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3429,6 +4111,8 @@
               <connections>
                 <connection
                   refId="Package\Insert into facts table\Lookup DimDate.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.SSISProject]"
+                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.SSISProject]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -3436,6 +4120,24 @@
                 <input
                   refId="Package\Insert into facts table\Lookup DimDate.Inputs[Lookup Input]"
                   name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insert into facts table\Lookup DimDate.Inputs[Lookup Input].Columns[Last Updated]"
+                      cachedDataType="dbDate"
+                      cachedName="Last Updated"
+                      lineageId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].Columns[Last Updated]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">LastUpdated</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
@@ -3443,10 +4145,39 @@
                 <output
                   refId="Package\Insert into facts table\Lookup DimDate.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Insert into facts table\Lookup DimDate.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert into facts table\Lookup DimDate.Outputs[Lookup Match Output].Columns[Did]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Insert into facts table\Lookup DimDate.Outputs[Lookup Match Output].Columns[Did]"
+                      name="Did"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Did</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insert into facts table\Lookup DimDate.Outputs[Lookup Match Output].Columns[LastUpdated]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Insert into facts table\Lookup DimDate.Outputs[Lookup Match Output].Columns[LastUpdated]"
+                      name="LastUpdated"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">LastUpdated</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -3517,7 +4248,7 @@ where [refTable].[SentimentSubjectivity] = ?</property>
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
+                  typeConverter="LookupNoMatchBehavior">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -3586,7 +4317,6 @@ where [refTable].[SentimentSubjectivity] = ?</property>
                 <output
                   refId="Package\Insert into facts table\Lookup DimReview.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Insert into facts table\Lookup DimReview.Inputs[Lookup Input]">
@@ -3691,7 +4421,7 @@ where [refTable].[App] = ?</property>
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
+                  typeConverter="LookupNoMatchBehavior">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -3738,7 +4468,7 @@ where [refTable].[App] = ?</property>
                     <inputColumn
                       refId="Package\Insert into facts table\Lookup GooglePlayReviews.Inputs[Lookup Input].Columns[App]"
                       cachedDataType="wstr"
-                      cachedLength="350"
+                      cachedLength="500"
                       cachedName="App"
                       lineageId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].Columns[App]">
                       <properties>
@@ -3760,7 +4490,6 @@ where [refTable].[App] = ?</property>
                 <output
                   refId="Package\Insert into facts table\Lookup GooglePlayReviews.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Insert into facts table\Lookup GooglePlayReviews.Inputs[Lookup Input]">
@@ -3928,7 +4657,7 @@ where [refTable].[Name] = ?</property>
                     <inputColumn
                       refId="Package\Insert into facts table\LookupDimAppKey.Inputs[Lookup Input].Columns[App]"
                       cachedDataType="wstr"
-                      cachedLength="350"
+                      cachedLength="500"
                       cachedName="App"
                       lineageId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].Columns[App]">
                       <properties>
@@ -4019,6 +4748,165 @@ where [refTable].[Name] = ?</property>
               </outputs>
             </component>
             <component
+              refId="Package\Insert into facts table\OLE DB FactsTable"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB FactsTable"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FactsGooglePlay]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Insert into facts table\OLE DB FactsTable.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.SSISProject]"
+                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.SSISProject]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].Columns[Installs]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Installs"
+                      externalMetadataColumnId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].ExternalColumns[Installs]"
+                      lineageId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].Columns[Installs]" />
+                    <inputColumn
+                      refId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].Columns[Price]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Price"
+                      externalMetadataColumnId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].ExternalColumns[Price]"
+                      lineageId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].Columns[Price]" />
+                    <inputColumn
+                      refId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].Columns[Aid]"
+                      cachedDataType="i4"
+                      cachedName="Aid"
+                      externalMetadataColumnId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].ExternalColumns[Aid]"
+                      lineageId="Package\Insert into facts table\LookupDimAppKey.Outputs[Lookup Match Output].Columns[Aid]" />
+                    <inputColumn
+                      refId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].Columns[Rid]"
+                      cachedDataType="i4"
+                      cachedName="Rid"
+                      externalMetadataColumnId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].ExternalColumns[Rid]"
+                      lineageId="Package\Insert into facts table\Lookup DimReview.Outputs[Lookup Match Output].Columns[Rid]" />
+                    <inputColumn
+                      refId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].Columns[Did]"
+                      cachedDataType="i4"
+                      cachedName="Did"
+                      externalMetadataColumnId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].ExternalColumns[Did]"
+                      lineageId="Package\Insert into facts table\Lookup DimDate.Outputs[Lookup Match Output].Columns[Did]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].ExternalColumns[ProfitApp]"
+                      dataType="r8"
+                      name="ProfitApp" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].ExternalColumns[Installs]"
+                      dataType="i4"
+                      name="Installs" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].ExternalColumns[Price]"
+                      dataType="r8"
+                      name="Price" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].ExternalColumns[Aid]"
+                      dataType="i4"
+                      name="Aid" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].ExternalColumns[Rid]"
+                      dataType="i4"
+                      name="Rid" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].ExternalColumns[Did]"
+                      dataType="i4"
+                      name="Did" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insert into facts table\OLE DB FactsTable.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insert into facts table\OLE DB FactsTable.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Insert into facts table\OLE DB FactsTable.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insert into facts table\OLE DB FactsTable.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Insert into facts table\OLE DB FactsTable.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Insert into facts table\OLE DB GooglePlayApps"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
@@ -4077,7 +4965,6 @@ where [refTable].[Name] = ?</property>
               <outputs>
                 <output
                   refId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output]"
-                  isSorted="true"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
@@ -4086,7 +4973,7 @@ where [refTable].[Name] = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].ExternalColumns[Installs]"
-                      length="350"
+                      length="500"
                       lineageId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].Columns[Installs]"
                       name="Installs"
                       truncationRowDisposition="FailComponent" />
@@ -4096,7 +4983,7 @@ where [refTable].[Name] = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].ExternalColumns[Price]"
-                      length="350"
+                      length="500"
                       lineageId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].Columns[Price]"
                       name="Price"
                       truncationRowDisposition="FailComponent" />
@@ -4106,17 +4993,16 @@ where [refTable].[Name] = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].ExternalColumns[App]"
-                      length="350"
+                      length="500"
                       lineageId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].Columns[App]"
                       name="App"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].Columns[Last Updated]"
-                      dataType="wstr"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].ExternalColumns[Last Updated]"
-                      length="350"
                       lineageId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].Columns[Last Updated]"
                       name="Last Updated"
                       truncationRowDisposition="FailComponent" />
@@ -4126,67 +5012,66 @@ where [refTable].[Name] = ?</property>
                     <externalMetadataColumn
                       refId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].ExternalColumns[App]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="App" />
                     <externalMetadataColumn
                       refId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].ExternalColumns[Category]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Category" />
                     <externalMetadataColumn
                       refId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].ExternalColumns[Type]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Type" />
                     <externalMetadataColumn
                       refId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].ExternalColumns[Rating]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Rating" />
                     <externalMetadataColumn
                       refId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].ExternalColumns[Reviews]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Reviews" />
                     <externalMetadataColumn
                       refId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].ExternalColumns[Size]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Size" />
                     <externalMetadataColumn
                       refId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].ExternalColumns[Installs]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Installs" />
                     <externalMetadataColumn
                       refId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].ExternalColumns[Price]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Price" />
                     <externalMetadataColumn
                       refId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].ExternalColumns[Content Rating]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Content Rating" />
                     <externalMetadataColumn
                       refId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].ExternalColumns[Genres]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Genres" />
                     <externalMetadataColumn
                       refId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].ExternalColumns[Last Updated]"
-                      dataType="wstr"
-                      length="350"
+                      dataType="dbDate"
                       name="Last Updated" />
                     <externalMetadataColumn
                       refId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].ExternalColumns[Current Ver]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Current Ver" />
                     <externalMetadataColumn
                       refId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].ExternalColumns[Android Ver]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       name="Android Ver" />
                   </externalMetadataColumns>
                 </output>
@@ -4210,25 +5095,24 @@ where [refTable].[Name] = ?</property>
                     <outputColumn
                       refId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Error Output].Columns[Installs]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       lineageId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Error Output].Columns[Installs]"
                       name="Installs" />
                     <outputColumn
                       refId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Error Output].Columns[Price]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       lineageId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Error Output].Columns[Price]"
                       name="Price" />
                     <outputColumn
                       refId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Error Output].Columns[App]"
                       dataType="wstr"
-                      length="350"
+                      length="500"
                       lineageId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Error Output].Columns[App]"
                       name="App" />
                     <outputColumn
                       refId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Error Output].Columns[Last Updated]"
-                      dataType="wstr"
-                      length="350"
+                      dataType="dbDate"
                       lineageId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Error Output].Columns[Last Updated]"
                       name="Last Updated" />
                   </outputColumns>
@@ -4254,6 +5138,11 @@ where [refTable].[Name] = ?</property>
               name="Lookup Match Output"
               startId="Package\Insert into facts table\Lookup DimReview.Outputs[Lookup Match Output]" />
             <path
+              refId="Package\Insert into facts table.Paths[Lookup Match Output3]"
+              endId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\Insert into facts table\Lookup DimDate.Outputs[Lookup Match Output]" />
+            <path
               refId="Package\Insert into facts table.Paths[OLE DB Source Output]"
               endId="Package\Insert into facts table\LookupDimAppKey.Inputs[Lookup Input]"
               name="OLE DB Source Output"
@@ -4278,27 +5167,31 @@ where [refTable].[Name] = ?</property>
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Data Flow Task"
-          TopLeft="420.571435733718,75.8588245933031" />
+          TopLeft="612.000010422299,250.82353292947" />
         <NodeLayout
-          Size="130.4,41.6"
-          Id="Package\GooglePlay"
-          TopLeft="277.142861862572,18.9647061483258" />
+          Size="242.4,41.6"
+          Id="Package\GooglePlayReviews File to db table"
+          TopLeft="277.142861862572,21.4117650061743" />
         <NodeLayout
           Size="201.6,41.6"
           Id="Package\Insert into dim application"
-          TopLeft="99.42857312183,80.7529423090001" />
+          TopLeft="99.42857312183,83.2000011668486" />
         <NodeLayout
-          Size="197.6,41.6"
+          Size="172,41.6"
           Id="Package\Insert into dim date"
-          TopLeft="99.42857312183,214.729414776205" />
+          TopLeft="99.42857312183,217.176473634053" />
         <NodeLayout
           Size="197.6,42.4"
           Id="Package\Insert into dim review"
-          TopLeft="100.57143028415,151.105884472144" />
+          TopLeft="100.57143028415,153.552943329992" />
         <NodeLayout
           Size="195.2,41.6"
           Id="Package\Insert into facts table"
-          TopLeft="101.71428744647,278.964709794728" />
+          TopLeft="101.71428744647,281.411768652577" />
+        <NodeLayout
+          Size="227.2,41.6"
+          Id="Package\GooglePlayApps File to db table 1"
+          TopLeft="537.142866290346,19.0117635476138" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -4362,7 +5255,9 @@ where [refTable].[Name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4396,7 +5291,9 @@ where [refTable].[Name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4490,7 +5387,9 @@ where [refTable].[Name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4512,7 +5411,9 @@ where [refTable].[Name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4606,7 +5507,9 @@ where [refTable].[Name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4678,20 +5581,20 @@ where [refTable].[Name] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\GooglePlay">
+    design-time-name="Package\GooglePlayReviews File to db table">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="179.2,41.6"
-          Id="Package\GooglePlay\OLE DB Destination 1"
+          Id="Package\GooglePlayReviews File to db table\OLE DB Destination 1"
           TopLeft="408.571435529359,196.988238056803" />
         <NodeLayout
           Size="159.2,41.6"
-          Id="Package\GooglePlay\Flat File Source 1"
+          Id="Package\GooglePlayReviews File to db table\Flat File Source 1"
           TopLeft="417.714292827918,21.4117650061743" />
         <EdgeLayout
-          Id="Package\GooglePlay.Paths[Flat File Source Output]"
+          Id="Package\GooglePlayReviews File to db table.Paths[Flat File Source Output]"
           TopLeft="497.742864178638,63.0117650061743">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4716,7 +5619,7 @@ where [refTable].[Name] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\GooglePlay\OLE DB Destination 1">
+    design-time-name="Package\GooglePlayReviews File to db table\OLE DB Destination 1">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4761,7 +5664,7 @@ where [refTable].[Name] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-8,40.8785714285715,16,16"
+              BoundingBox="-8,40.8785714285714,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4934,33 +5837,21 @@ where [refTable].[Name] = ?</property>
         <NodeLayout
           Size="166.4,41.6"
           Id="Package\Insert into facts table\LookupDimAppKey"
-          TopLeft="86.2857157551512,196.658825760152" />
+          TopLeft="70.8571440638328,152.000001604417" />
         <EdgeLayout
           Id="Package\Insert into facts table.Paths[OLE DB Source Output]"
-          TopLeft="157.168253948791,85.3594765922373">
+          TopLeft="155.612699006312,85.3594765922373">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="12.31746180636,111.299349167914"
+              EndConnector="0,66.6405250121794"
               Start="0,0"
-              End="12.31746180636,103.799349167914">
+              End="0,59.1405250121794">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,51.6496745839571" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,51.6496745839571"
-                    Point2="0,55.6496745839571"
-                    Point3="4,55.6496745839571" />
-                  <mssgle:LineSegment
-                    End="8.31746180636,55.6496745839571" />
-                  <mssgle:CubicBezierSegment
-                    Point1="8.31746180636,55.6496745839571"
-                    Point2="12.31746180636,55.6496745839571"
-                    Point3="12.31746180636,59.6496745839571" />
-                  <mssgle:LineSegment
-                    End="12.31746180636,103.799349167914" />
+                    End="0,59.1405250121794" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4972,108 +5863,136 @@ where [refTable].[Name] = ?</property>
         <NodeLayout
           Size="205.6,41.6"
           Id="Package\Insert into facts table\Lookup GooglePlayReviews"
-          TopLeft="379.428577890202,185.976473196485" />
+          TopLeft="399.4285782308,149.270590328758" />
         <EdgeLayout
           Id="Package\Insert into facts table.Paths[Lookup Match Output]"
-          TopLeft="252.685715755151,217.458825760152">
+          TopLeft="237.257144063833,171.435295966587">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="126.74286213505,-10.6823525636665"
+              EndConnector="162.171434166967,0"
               Start="0,0"
-              End="119.24286213505,-10.6823525636665">
+              End="154.671434166967,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="59.3714310675252,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="59.3714310675252,0"
-                    Point2="63.3714310675252,0"
-                    Point3="63.3714310675252,-4" />
-                  <mssgle:LineSegment
-                    End="63.3714310675252,-6.68235256366648" />
-                  <mssgle:CubicBezierSegment
-                    Point1="63.3714310675252,-6.68235256366648"
-                    Point2="63.3714310675252,-10.6823525636665"
-                    Point3="67.3714310675252,-10.6823525636665" />
-                  <mssgle:LineSegment
-                    End="119.24286213505,-10.6823525636665" />
+                    End="154.671434166967,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="15.1800443487752,1,96.3827734375,11.609375"
+              BoundingBox="29.1443303647334,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
           Size="168,41.6"
           Id="Package\Insert into facts table\Lookup DimReview"
-          TopLeft="126.285716436347,313.223533804606" />
+          TopLeft="82.2857156870317,265.505886076561" />
         <EdgeLayout
           Id="Package\Insert into facts table.Paths[Lookup Match Output1]"
-          TopLeft="482.228577890202,227.576473196485">
+          TopLeft="502.2285782308,190.870590328758">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-271.942861453854,85.6470606081213"
+              EndConnector="-335.942862543768,74.6352957478031"
               Start="0,0"
-              End="-271.942861453854,78.1470606081213">
+              End="-335.942862543768,67.1352957478031">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.8235303040607" />
+                    End="0,33.3176478739015" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,38.8235303040607"
-                    Point2="0,42.8235303040607"
-                    Point3="-4,42.8235303040607" />
+                    Point1="0,33.3176478739015"
+                    Point2="0,37.3176478739015"
+                    Point3="-4,37.3176478739015" />
                   <mssgle:LineSegment
-                    End="-267.942861453854,42.8235303040607" />
+                    End="-331.942862543768,37.3176478739015" />
                   <mssgle:CubicBezierSegment
-                    Point1="-267.942861453854,42.8235303040607"
-                    Point2="-271.942861453854,42.8235303040607"
-                    Point3="-271.942861453854,46.8235303040607" />
+                    Point1="-331.942862543768,37.3176478739015"
+                    Point2="-335.942862543768,37.3176478739015"
+                    Point3="-335.942862543768,41.3176478739015" />
                   <mssgle:LineSegment
-                    End="-271.942861453854,78.1470606081213" />
+                    End="-335.942862543768,67.1352957478031" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-184.162817445677,47.8235303040607,96.3827734375,11.609375"
+              BoundingBox="-216.162817990634,42.3176478739015,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
           Size="156.8,41.6"
           Id="Package\Insert into facts table\Lookup DimDate"
-          TopLeft="482.857151080151,318.729416088909" />
+          TopLeft="436.000007425036,258.776474071621" />
         <EdgeLayout
           Id="Package\Insert into facts table.Paths[Lookup Match Output2]"
-          TopLeft="294.285716436347,336.776474946758">
+          TopLeft="250.285715687032,282.941180074091">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="188.571434643804,0"
+              EndConnector="185.714291738004,0"
               Start="0,0"
-              End="181.071434643804,0">
+              End="178.214291738004,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="181.071434643804,0" />
+                    End="178.214291738004,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="42.344330603152,5,96.3827734375,11.609375"
+              BoundingBox="40.9157591502522,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="168,41.6"
+          Id="Package\Insert into facts table\OLE DB FactsTable"
+          TopLeft="283.428576255331,367.670593391735" />
+        <EdgeLayout
+          Id="Package\Insert into facts table.Paths[Lookup Match Output3]"
+          TopLeft="514.400007425036,300.376474071621">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-146.971431169705,67.2941193201139"
+              Start="0,0"
+              End="-146.971431169705,59.7941193201139">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.647059660057" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.647059660057"
+                    Point2="0,33.647059660057"
+                    Point3="-4,33.647059660057" />
+                  <mssgle:LineSegment
+                    End="-142.971431169705,33.647059660057" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-142.971431169705,33.647059660057"
+                    Point2="-146.971431169705,33.647059660057"
+                    Point3="-146.971431169705,37.647059660057" />
+                  <mssgle:LineSegment
+                    End="-146.971431169705,59.7941193201139" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-130.545754647352,38.647059660057,114.120078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -5159,6 +6078,105 @@ where [refTable].[Name] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insert into facts table\Lookup DimDate">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimDate]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\GooglePlayApps File to db table 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\GooglePlayApps File to db table 1\OLE DB Destination 1"
+          TopLeft="438.971435529359,185.788238056803" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\GooglePlayApps File to db table 1\Flat File Source"
+          TopLeft="437.6,41.6" />
+        <EdgeLayout
+          Id="Package\GooglePlayApps File to db table 1.Paths[Flat File Source Output]"
+          TopLeft="512.8,83.2">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="15.771435529359,102.588238056803"
+              Start="0,0"
+              End="15.771435529359,95.088238056803">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.2941190284015" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47.2941190284015"
+                    Point2="0,51.2941190284015"
+                    Point3="4,51.2941190284015" />
+                  <mssgle:LineSegment
+                    End="11.771435529359,51.2941190284015" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.771435529359,51.2941190284015"
+                    Point2="15.771435529359,51.2941190284015"
+                    Point3="15.771435529359,55.2941190284015" />
+                  <mssgle:LineSegment
+                    End="15.771435529359,95.088238056803" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\GooglePlayApps File to db table 1\OLE DB Destination 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insert into facts table\OLE DB FactsTable">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
