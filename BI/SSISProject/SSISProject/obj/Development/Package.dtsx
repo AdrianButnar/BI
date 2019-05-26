@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="84"
-  DTS:VersionGUID="{F33F0A58-AA94-4973-A352-B455E861B1A7}">
+  DTS:VersionBuild="92"
+  DTS:VersionGUID="{9137A395-D995-413B-939A-0E1345FAA4DA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3342,13 +3342,13 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Insert into dim date"
+      DTS:refId="Package\Insert into dim date  nu mai are sens"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{CF2BED36-6E71-4E98-9685-678E9574D8C8}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Insert into dim date"
+      DTS:ObjectName="Insert into dim date  nu mai are sens"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -3356,7 +3356,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Insert into dim date\OLE DB Destination"
+              refId="Package\Insert into dim date  nu mai are sens\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -3413,7 +3413,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Insert into dim date\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Insert into dim date  nu mai are sens\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.SSISProject]"
                   connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.SSISProject]"
                   description="The OLE DB runtime connection used to access the database."
@@ -3421,74 +3421,75 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Insert into dim date\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Insert into dim date  nu mai are sens\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Insert into dim date\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Last Updated]"
-                      cachedDataType="dbDate"
-                      cachedName="Last Updated"
-                      externalMetadataColumnId="Package\Insert into dim date\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LastUpdated]"
-                      lineageId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].Columns[Last Updated]" />
-                    <inputColumn
-                      refId="Package\Insert into dim date\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Current Ver]"
-                      cachedDataType="wstr"
-                      cachedLength="500"
-                      cachedName="Current Ver"
-                      externalMetadataColumnId="Package\Insert into dim date\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrentVersion]"
-                      lineageId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].Columns[Current Ver]" />
-                    <inputColumn
-                      refId="Package\Insert into dim date\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Android Ver]"
-                      cachedDataType="wstr"
-                      cachedLength="500"
-                      cachedName="Android Ver"
-                      externalMetadataColumnId="Package\Insert into dim date\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AndroidVersion]"
-                      lineageId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].Columns[Android Ver]" />
-                  </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Insert into dim date\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Did]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Did]"
                       dataType="i4"
                       name="Did" />
                     <externalMetadataColumn
-                      refId="Package\Insert into dim date\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LastUpdated]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[date]"
                       dataType="dbDate"
-                      name="LastUpdated" />
+                      name="date" />
                     <externalMetadataColumn
-                      refId="Package\Insert into dim date\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrentVersion]"
-                      dataType="wstr"
-                      length="500"
-                      name="CurrentVersion" />
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[day]"
+                      dataType="i4"
+                      name="day" />
                     <externalMetadataColumn
-                      refId="Package\Insert into dim date\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AndroidVersion]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[month]"
+                      dataType="i4"
+                      name="month" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FirstOfMonth]"
+                      dataType="dbDate"
+                      name="FirstOfMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthName]"
                       dataType="wstr"
-                      length="500"
-                      name="AndroidVersion" />
+                      length="30"
+                      name="MonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[week]"
+                      dataType="i4"
+                      name="week" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayOfWeek]"
+                      dataType="i4"
+                      name="DayOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[year]"
+                      dataType="i4"
+                      name="year" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FirstOfYear]"
+                      dataType="dbDate"
+                      name="FirstOfYear" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Insert into dim date\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Insert into dim date  nu mai are sens\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Insert into dim date\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Insert into dim date  nu mai are sens\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Insert into dim date\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Insert into dim date\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Insert into dim date  nu mai are sens\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Insert into dim date\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Insert into dim date\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Insert into dim date  nu mai are sens\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3497,7 +3498,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Insert into dim date\OLE DB Source"
+              refId="Package\Insert into dim date  nu mai are sens\OLE DB Source"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -3546,7 +3547,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Insert into dim date\OLE DB Source.Connections[OleDbConnection]"
+                  refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.SSISProject]"
                   connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.SSISProject]"
                   description="The OLE DB runtime connection used to access the database."
@@ -3554,140 +3555,140 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output]"
+                  refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].Columns[Last Updated]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output].Columns[Last Updated]"
                       dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Last Updated]"
-                      lineageId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].Columns[Last Updated]"
+                      externalMetadataColumnId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Last Updated]"
+                      lineageId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output].Columns[Last Updated]"
                       name="Last Updated"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].Columns[Current Ver]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output].Columns[Current Ver]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Current Ver]"
+                      externalMetadataColumnId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Current Ver]"
                       length="500"
-                      lineageId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].Columns[Current Ver]"
+                      lineageId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output].Columns[Current Ver]"
                       name="Current Ver"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].Columns[Android Ver]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output].Columns[Android Ver]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Android Ver]"
+                      externalMetadataColumnId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Android Ver]"
                       length="500"
-                      lineageId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].Columns[Android Ver]"
+                      lineageId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output].Columns[Android Ver]"
                       name="Android Ver"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[App]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[App]"
                       dataType="wstr"
                       length="500"
                       name="App" />
                     <externalMetadataColumn
-                      refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Category]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Category]"
                       dataType="wstr"
                       length="500"
                       name="Category" />
                     <externalMetadataColumn
-                      refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Rating]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Rating]"
                       dataType="wstr"
                       length="500"
                       name="Rating" />
                     <externalMetadataColumn
-                      refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Reviews]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Reviews]"
                       dataType="wstr"
                       length="500"
                       name="Reviews" />
                     <externalMetadataColumn
-                      refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Size]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Size]"
                       dataType="wstr"
                       length="500"
                       name="Size" />
                     <externalMetadataColumn
-                      refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Installs]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Installs]"
                       dataType="wstr"
                       length="500"
                       name="Installs" />
                     <externalMetadataColumn
-                      refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Type]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Type]"
                       dataType="wstr"
                       length="500"
                       name="Type" />
                     <externalMetadataColumn
-                      refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Price]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Price]"
                       dataType="wstr"
                       length="500"
                       name="Price" />
                     <externalMetadataColumn
-                      refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Content Rating]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Content Rating]"
                       dataType="wstr"
                       length="500"
                       name="Content Rating" />
                     <externalMetadataColumn
-                      refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Genres]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Genres]"
                       dataType="wstr"
                       length="500"
                       name="Genres" />
                     <externalMetadataColumn
-                      refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Last Updated]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Last Updated]"
                       dataType="dbDate"
                       name="Last Updated" />
                     <externalMetadataColumn
-                      refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Current Ver]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Current Ver]"
                       dataType="wstr"
                       length="500"
                       name="Current Ver" />
                     <externalMetadataColumn
-                      refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Android Ver]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Android Ver]"
                       dataType="wstr"
                       length="500"
                       name="Android Ver" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                     <outputColumn
-                      refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Last Updated]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Last Updated]"
                       dataType="dbDate"
-                      lineageId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Last Updated]"
+                      lineageId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Last Updated]"
                       name="Last Updated" />
                     <outputColumn
-                      refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Current Ver]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Current Ver]"
                       dataType="wstr"
                       length="500"
-                      lineageId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Current Ver]"
+                      lineageId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Current Ver]"
                       name="Current Ver" />
                     <outputColumn
-                      refId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Android Ver]"
+                      refId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Android Ver]"
                       dataType="wstr"
                       length="500"
-                      lineageId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Android Ver]"
+                      lineageId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Android Ver]"
                       name="Android Ver" />
                   </outputColumns>
                   <externalMetadataColumns />
@@ -3697,10 +3698,10 @@
           </components>
           <paths>
             <path
-              refId="Package\Insert into dim date.Paths[OLE DB Source Output]"
-              endId="Package\Insert into dim date\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\Insert into dim date  nu mai are sens.Paths[OLE DB Source Output]"
+              endId="Package\Insert into dim date  nu mai are sens\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
-              startId="Package\Insert into dim date\OLE DB Source.Outputs[OLE DB Source Output]" />
+              startId="Package\Insert into dim date  nu mai are sens\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -4062,7 +4063,7 @@
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[DimDate]) [refTable]
-where [refTable].[LastUpdated] = ?</property>
+where [refTable].[date] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -4093,7 +4094,7 @@ where [refTable].[LastUpdated] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Did" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LastUpdated" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CurrentVersion" dataType="DT_WSTR" length="500" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AndroidVersion" dataType="DT_WSTR" length="500" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Did" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="day" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="month" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FirstOfMonth" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MonthName" dataType="DT_WSTR" length="30" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="week" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayOfWeek" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="year" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FirstOfYear" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -4130,7 +4131,7 @@ where [refTable].[LastUpdated] = ?</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">LastUpdated</property>
+                          name="JoinToReferenceColumn">date</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -4164,17 +4165,17 @@ where [refTable].[LastUpdated] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Insert into facts table\Lookup DimDate.Outputs[Lookup Match Output].Columns[LastUpdated]"
+                      refId="Package\Insert into facts table\Lookup DimDate.Outputs[Lookup Match Output].Columns[date]"
                       dataType="dbDate"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Insert into facts table\Lookup DimDate.Outputs[Lookup Match Output].Columns[LastUpdated]"
-                      name="LastUpdated"
+                      lineageId="Package\Insert into facts table\Lookup DimDate.Outputs[Lookup Match Output].Columns[date]"
+                      name="date"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">LastUpdated</property>
+                          name="CopyFromReferenceColumn">date</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -4851,6 +4852,26 @@ where [refTable].[Name] = ?</property>
                       cachedName="Did"
                       externalMetadataColumnId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].ExternalColumns[Did]"
                       lineageId="Package\Insert into facts table\Lookup DimDate.Outputs[Lookup Match Output].Columns[Did]" />
+                    <inputColumn
+                      refId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].Columns[Current Ver]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Current Ver"
+                      externalMetadataColumnId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].ExternalColumns[CurrentVersion]"
+                      lineageId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].Columns[Current Ver]" />
+                    <inputColumn
+                      refId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].Columns[Android Ver]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Android Ver"
+                      externalMetadataColumnId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].ExternalColumns[AndroidVersion]"
+                      lineageId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].Columns[Android Ver]" />
+                    <inputColumn
+                      refId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].Columns[Last Updated]"
+                      cachedDataType="dbDate"
+                      cachedName="Last Updated"
+                      externalMetadataColumnId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].ExternalColumns[LastUpdated]"
+                      lineageId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].Columns[Last Updated]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4878,6 +4899,24 @@ where [refTable].[Name] = ?</property>
                       refId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].ExternalColumns[Did]"
                       dataType="i4"
                       name="Did" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].ExternalColumns[LastUpdated]"
+                      dataType="dbDate"
+                      name="LastUpdated" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].ExternalColumns[CurrentVersion]"
+                      dataType="wstr"
+                      length="500"
+                      name="CurrentVersion" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].ExternalColumns[AndroidVersion]"
+                      dataType="wstr"
+                      length="500"
+                      name="AndroidVersion" />
+                    <externalMetadataColumn
+                      refId="Package\Insert into facts table\OLE DB FactsTable.Inputs[OLE DB Destination Input].ExternalColumns[Fid]"
+                      dataType="i4"
+                      name="Fid" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -5006,6 +5045,26 @@ where [refTable].[Name] = ?</property>
                       lineageId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].Columns[Last Updated]"
                       name="Last Updated"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].Columns[Current Ver]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].ExternalColumns[Current Ver]"
+                      length="500"
+                      lineageId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].Columns[Current Ver]"
+                      name="Current Ver"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].Columns[Android Ver]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].ExternalColumns[Android Ver]"
+                      length="500"
+                      lineageId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Output].Columns[Android Ver]"
+                      name="Android Ver"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -5115,6 +5174,18 @@ where [refTable].[Name] = ?</property>
                       dataType="dbDate"
                       lineageId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Error Output].Columns[Last Updated]"
                       name="Last Updated" />
+                    <outputColumn
+                      refId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Error Output].Columns[Current Ver]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Error Output].Columns[Current Ver]"
+                      name="Current Ver" />
+                    <outputColumn
+                      refId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Error Output].Columns[Android Ver]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Insert into facts table\OLE DB GooglePlayApps.Outputs[OLE DB Source Error Output].Columns[Android Ver]"
+                      name="Android Ver" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -5169,6 +5240,10 @@ where [refTable].[Name] = ?</property>
           Id="Package\Data Flow Task"
           TopLeft="612.000010422299,250.82353292947" />
         <NodeLayout
+          Size="227.2,41.6"
+          Id="Package\GooglePlayApps File to db table 1"
+          TopLeft="537.142866290346,19.0117635476138" />
+        <NodeLayout
           Size="242.4,41.6"
           Id="Package\GooglePlayReviews File to db table"
           TopLeft="277.142861862572,21.4117650061743" />
@@ -5177,8 +5252,8 @@ where [refTable].[Name] = ?</property>
           Id="Package\Insert into dim application"
           TopLeft="99.42857312183,83.2000011668486" />
         <NodeLayout
-          Size="172,41.6"
-          Id="Package\Insert into dim date"
+          Size="253.6,41.6"
+          Id="Package\Insert into dim date  nu mai are sens"
           TopLeft="99.42857312183,217.176473634053" />
         <NodeLayout
           Size="197.6,42.4"
@@ -5188,10 +5263,6 @@ where [refTable].[Name] = ?</property>
           Size="195.2,41.6"
           Id="Package\Insert into facts table"
           TopLeft="101.71428744647,281.411768652577" />
-        <NodeLayout
-          Size="227.2,41.6"
-          Id="Package\GooglePlayApps File to db table 1"
-          TopLeft="537.142866290346,19.0117635476138" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -5581,10 +5652,75 @@ where [refTable].[Name] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
+    design-time-name="Package\GooglePlayApps File to db table 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\GooglePlayApps File to db table 1\Flat File Source"
+          TopLeft="437.6,41.6" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\GooglePlayApps File to db table 1\OLE DB Destination 1"
+          TopLeft="438.971435529359,185.788238056803" />
+        <EdgeLayout
+          Id="Package\GooglePlayApps File to db table 1.Paths[Flat File Source Output]"
+          TopLeft="512.8,83.2">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="15.771435529359,102.588238056803"
+              Start="0,0"
+              End="15.771435529359,95.088238056803">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.2941190284015" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47.2941190284015"
+                    Point2="0,51.2941190284015"
+                    Point3="4,51.2941190284015" />
+                  <mssgle:LineSegment
+                    End="11.771435529359,51.2941190284015" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.771435529359,51.2941190284015"
+                    Point2="15.771435529359,51.2941190284015"
+                    Point3="15.771435529359,55.2941190284015" />
+                  <mssgle:LineSegment
+                    End="15.771435529359,95.088238056803" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\GooglePlayApps File to db table 1\OLE DB Destination 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\GooglePlayReviews File to db table">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="179.2,41.6"
           Id="Package\GooglePlayReviews File to db table\OLE DB Destination 1"
@@ -5612,7 +5748,9 @@ where [refTable].[Name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5698,20 +5836,20 @@ where [refTable].[Name] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Insert into dim date">
+    design-time-name="Package\Insert into dim date  nu mai are sens">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="149.6,41.6"
-          Id="Package\Insert into dim date\OLE DB Source"
+          Id="Package\Insert into dim date  nu mai are sens\OLE DB Source"
           TopLeft="460,151.2" />
         <NodeLayout
           Size="170.4,41.6"
-          Id="Package\Insert into dim date\OLE DB Destination"
+          Id="Package\Insert into dim date  nu mai are sens\OLE DB Destination"
           TopLeft="452,333.6" />
         <EdgeLayout
-          Id="Package\Insert into dim date.Paths[OLE DB Source Output]"
+          Id="Package\Insert into dim date  nu mai are sens.Paths[OLE DB Source Output]"
           TopLeft="536,192.8">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5736,7 +5874,7 @@ where [refTable].[Name] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Insert into dim date\OLE DB Destination">
+    design-time-name="Package\Insert into dim date  nu mai are sens\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5749,7 +5887,7 @@ where [refTable].[Name] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Insert into dim date\OLE DB Source">
+    design-time-name="Package\Insert into dim date  nu mai are sens\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5765,7 +5903,7 @@ where [refTable].[Name] = ?</property>
     design-time-name="Package\Insert into dim review">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\Insert into dim review\OLE DB Source"
@@ -5793,7 +5931,9 @@ where [refTable].[Name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5831,39 +5971,29 @@ where [refTable].[Name] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="192,41.6"
-          Id="Package\Insert into facts table\OLE DB GooglePlayApps"
-          TopLeft="61.1682539487912,43.7594765922373" />
+          Size="168,41.6"
+          Id="Package\Insert into facts table\Lookup DimReview"
+          TopLeft="82.2857156870317,265.505886076561" />
         <NodeLayout
-          Size="166.4,41.6"
-          Id="Package\Insert into facts table\LookupDimAppKey"
-          TopLeft="70.8571440638328,152.000001604417" />
-        <EdgeLayout
-          Id="Package\Insert into facts table.Paths[OLE DB Source Output]"
-          TopLeft="155.612699006312,85.3594765922373">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,66.6405250121794"
-              Start="0,0"
-              End="0,59.1405250121794">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,59.1405250121794" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="168,41.6"
+          Id="Package\Insert into facts table\OLE DB FactsTable"
+          TopLeft="283.428576255331,367.670593391735" />
         <NodeLayout
           Size="205.6,41.6"
           Id="Package\Insert into facts table\Lookup GooglePlayReviews"
           TopLeft="399.4285782308,149.270590328758" />
+        <NodeLayout
+          Size="192,41.6"
+          Id="Package\Insert into facts table\OLE DB GooglePlayApps"
+          TopLeft="61.1682539487912,43.7594765922373" />
+        <NodeLayout
+          Size="156.8,41.6"
+          Id="Package\Insert into facts table\Lookup DimDate"
+          TopLeft="436.000007425036,258.776474071621" />
+        <NodeLayout
+          Size="166.4,41.6"
+          Id="Package\Insert into facts table\LookupDimAppKey"
+          TopLeft="70.8571440638328,152.000001604417" />
         <EdgeLayout
           Id="Package\Insert into facts table.Paths[Lookup Match Output]"
           TopLeft="237.257144063833,171.435295966587">
@@ -5884,82 +6014,34 @@ where [refTable].[Name] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="29.1443303647334,5,96.3827734375,11.609375"
+              BoundingBox="-3.17602119776652,5,161.0234765625,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="168,41.6"
-          Id="Package\Insert into facts table\Lookup DimReview"
-          TopLeft="82.2857156870317,265.505886076561" />
         <EdgeLayout
-          Id="Package\Insert into facts table.Paths[Lookup Match Output1]"
-          TopLeft="502.2285782308,190.870590328758">
+          Id="Package\Insert into facts table.Paths[OLE DB Source Output]"
+          TopLeft="155.612699006312,85.3594765922373">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-335.942862543768,74.6352957478031"
+              EndConnector="0,66.6405250121794"
               Start="0,0"
-              End="-335.942862543768,67.1352957478031">
+              End="0,59.1405250121794">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,33.3176478739015" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,33.3176478739015"
-                    Point2="0,37.3176478739015"
-                    Point3="-4,37.3176478739015" />
-                  <mssgle:LineSegment
-                    End="-331.942862543768,37.3176478739015" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-331.942862543768,37.3176478739015"
-                    Point2="-335.942862543768,37.3176478739015"
-                    Point3="-335.942862543768,41.3176478739015" />
-                  <mssgle:LineSegment
-                    End="-335.942862543768,67.1352957478031" />
+                    End="0,59.1405250121794" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-216.162817990634,42.3176478739015,96.3827734375,11.609375"
+              BoundingBox="-27.53947265625,23.9486804748397,55.0789453125,11.2431640625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="156.8,41.6"
-          Id="Package\Insert into facts table\Lookup DimDate"
-          TopLeft="436.000007425036,258.776474071621" />
-        <EdgeLayout
-          Id="Package\Insert into facts table.Paths[Lookup Match Output2]"
-          TopLeft="250.285715687032,282.941180074091">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="185.714291738004,0"
-              Start="0,0"
-              End="178.214291738004,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="178.214291738004,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="40.9157591502522,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="168,41.6"
-          Id="Package\Insert into facts table\OLE DB FactsTable"
-          TopLeft="283.428576255331,367.670593391735" />
         <EdgeLayout
           Id="Package\Insert into facts table.Paths[Lookup Match Output3]"
           TopLeft="514.400007425036,300.376474071621">
@@ -5992,7 +6074,67 @@ where [refTable].[Name] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-130.545754647352,38.647059660057,114.120078125,16"
+              BoundingBox="-151.267453866103,38.647059660057,155.5634765625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insert into facts table.Paths[Lookup Match Output2]"
+          TopLeft="250.285715687032,282.941180074091">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="185.714291738004,0"
+              Start="0,0"
+              End="178.214291738004,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="178.214291738004,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="11.325407587752,5,155.5634765625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insert into facts table.Paths[Lookup Match Output1]"
+          TopLeft="502.2285782308,190.870590328758">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-335.942862543768,74.6352957478031"
+              Start="0,0"
+              End="-335.942862543768,67.1352957478031">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.3176478739015" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.3176478739015"
+                    Point2="0,37.3176478739015"
+                    Point3="-4,37.3176478739015" />
+                  <mssgle:LineSegment
+                    End="-331.942862543768,37.3176478739015" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-331.942862543768,37.3176478739015"
+                    Point2="-335.942862543768,37.3176478739015"
+                    Point3="-335.942862543768,41.3176478739015" />
+                  <mssgle:LineSegment
+                    End="-335.942862543768,67.1352957478031" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-245.753169553134,42.3176478739015,155.5634765625,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -6000,20 +6142,7 @@ where [refTable].[Name] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Insert into facts table\OLE DB GooglePlayApps">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Insert into facts table\LookupDimAppKey">
+    design-time-name="Package\Insert into facts table\Lookup DimReview">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -6023,15 +6152,28 @@ where [refTable].[Name] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DimApplication]</Value>
+          type="q3:string">[dbo].[DimReview]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insert into facts table\OLE DB FactsTable">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -6051,7 +6193,7 @@ where [refTable].[Name] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6059,25 +6201,15 @@ where [refTable].[Name] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Insert into facts table\Lookup DimReview">
+    design-time-name="Package\Insert into facts table\OLE DB GooglePlayApps">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimReview]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -6097,86 +6229,33 @@ where [refTable].[Name] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\GooglePlayApps File to db table 1">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="179.2,41.6"
-          Id="Package\GooglePlayApps File to db table 1\OLE DB Destination 1"
-          TopLeft="438.971435529359,185.788238056803" />
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\GooglePlayApps File to db table 1\Flat File Source"
-          TopLeft="437.6,41.6" />
-        <EdgeLayout
-          Id="Package\GooglePlayApps File to db table 1.Paths[Flat File Source Output]"
-          TopLeft="512.8,83.2">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="15.771435529359,102.588238056803"
-              Start="0,0"
-              End="15.771435529359,95.088238056803">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,47.2941190284015" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,47.2941190284015"
-                    Point2="0,51.2941190284015"
-                    Point3="4,51.2941190284015" />
-                  <mssgle:LineSegment
-                    End="11.771435529359,51.2941190284015" />
-                  <mssgle:CubicBezierSegment
-                    Point1="11.771435529359,51.2941190284015"
-                    Point2="15.771435529359,51.2941190284015"
-                    Point3="15.771435529359,55.2941190284015" />
-                  <mssgle:LineSegment
-                    End="15.771435529359,95.088238056803" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\GooglePlayApps File to db table 1\OLE DB Destination 1">
+    design-time-name="Package\Insert into facts table\LookupDimAppKey">
     <Properties>
       <Property>
-        <Name>DataSourceViewID</Name>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimApplication]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q2:string">Table</Value>
+          type="q4:string">0</Value>
       </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Insert into facts table\OLE DB FactsTable">
-    <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
