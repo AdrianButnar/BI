@@ -1,0 +1,149 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="90c065e1-ba25-4d4c-9693-b26558873a38" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>SSIS Project</ID>
+  <Name>SSIS Project</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:NameMatchingCriteria</Name>
+      <Value>1</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>SSIS Project</DataSourceID>
+  <Schema>
+    <xs:schema id="SSIS_x0020_Project" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="SSIS_x0020_Project" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="506e4786-9145-4790-bc93-2f876d4a4868">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_DimApplication" msprop:design-time-name="7aaed25c-305e-4f50-80dd-6f928d14529a" msprop:DbTableName="DimApplication" msprop:FriendlyName="DimApplication" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Aid" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="63797a2a-8ebc-416c-9d3c-786286841c4e" msprop:DbColumnName="Aid" msprop:FriendlyName="Aid" type="xs:int" />
+                  <xs:element name="App" msprop:design-time-name="246edccf-56da-4557-a076-0dffc8e4a68f" msprop:DbColumnName="App" msprop:FriendlyName="App" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="500" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Category" msprop:design-time-name="6cea6460-fece-4634-afc8-a4b75615fd42" msprop:DbColumnName="Category" msprop:FriendlyName="Category" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="500" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Type" msprop:design-time-name="37955eca-1da0-41f2-a95c-f8b737c535f1" msprop:DbColumnName="Type" msprop:FriendlyName="Type" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="500" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Rating" msprop:design-time-name="6853c867-7582-4752-a61a-ca8b2294341a" msprop:DbColumnName="Rating" msprop:FriendlyName="Rating" type="xs:double" minOccurs="0" />
+                  <xs:element name="Genres" msprop:design-time-name="8be41d39-c65c-44fc-bdcc-c4881343d93d" msprop:DbColumnName="Genres" msprop:FriendlyName="Genres" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="500" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimDate" msprop:design-time-name="2c5ba159-0f1c-4ce0-82e1-f6f9798d87c5" msprop:DbTableName="DimDate" msprop:FriendlyName="DimDate" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Did" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="00b44fd0-3c94-474e-a4e6-4ce15a10dcc0" msprop:DbColumnName="Did" msprop:FriendlyName="Did" type="xs:int" />
+                  <xs:element name="date" msprop:design-time-name="041f439b-5604-4de9-8012-eb8351081c4b" msprop:DbColumnName="date" msprop:FriendlyName="date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="day" msdata:ReadOnly="true" msprop:design-time-name="2c1fa6f1-dbca-49d2-8f09-26c31a7b579e" msprop:DbColumnName="day" msprop:FriendlyName="day" type="xs:int" minOccurs="0" />
+                  <xs:element name="month" msdata:ReadOnly="true" msprop:design-time-name="eb57d248-70d6-429a-a3f4-60a06d8839f6" msprop:DbColumnName="month" msprop:FriendlyName="month" type="xs:int" minOccurs="0" />
+                  <xs:element name="FirstOfMonth" msdata:ReadOnly="true" msprop:design-time-name="e5d7482c-22ae-4c99-a603-f65c1ed43e71" msprop:DbColumnName="FirstOfMonth" msprop:FriendlyName="FirstOfMonth" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="MonthName" msdata:ReadOnly="true" msprop:design-time-name="c042ea2e-0995-497b-b24a-3b6a9c6d9235" msprop:DbColumnName="MonthName" msprop:FriendlyName="MonthName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="week" msdata:ReadOnly="true" msprop:design-time-name="cb8543d9-a714-4ddd-91d6-54bfb11950f3" msprop:DbColumnName="week" msprop:FriendlyName="week" type="xs:int" minOccurs="0" />
+                  <xs:element name="DayOfWeek" msdata:ReadOnly="true" msprop:design-time-name="46817e37-9876-4c6d-93bb-218ee3bf1c0b" msprop:DbColumnName="DayOfWeek" msprop:FriendlyName="DayOfWeek" type="xs:int" minOccurs="0" />
+                  <xs:element name="year" msdata:ReadOnly="true" msprop:design-time-name="5700b526-aa18-4ec9-a7ae-89bf06bf1350" msprop:DbColumnName="year" msprop:FriendlyName="year" type="xs:int" minOccurs="0" />
+                  <xs:element name="FirstOfYear" msdata:ReadOnly="true" msprop:design-time-name="32f0677a-25a4-4659-8087-c2b5ac7bbd5a" msprop:DbColumnName="FirstOfYear" msprop:FriendlyName="FirstOfYear" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_FactsGooglePlay" msprop:design-time-name="72975361-de1e-4168-a279-ae5e488461fb" msprop:DbTableName="FactsGooglePlay" msprop:FriendlyName="FactsGooglePlay" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Fid" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="4649d49f-45d0-4cdc-aa51-75e6f8aa51cc" msprop:DbColumnName="Fid" msprop:FriendlyName="Fid" type="xs:int" />
+                  <xs:element name="Price" msprop:design-time-name="2992ba66-e7cb-448a-8410-0523cb424bfc" msprop:DbColumnName="Price" msprop:FriendlyName="Price" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="500" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Installs" msprop:design-time-name="c1792c7a-3de8-4ea8-bbf3-46d18e0aff62" msprop:DbColumnName="Installs" msprop:FriendlyName="Installs" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="500" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Aid" msprop:design-time-name="350907e4-bb3d-4764-8273-4423b8d51b51" msprop:DbColumnName="Aid" msprop:FriendlyName="Aid" type="xs:int" minOccurs="0" />
+                  <xs:element name="Rid" msprop:design-time-name="899586f7-dcf3-4b62-a934-094eb9d15751" msprop:DbColumnName="Rid" msprop:FriendlyName="Rid" type="xs:int" minOccurs="0" />
+                  <xs:element name="Did" msprop:design-time-name="68ea6ec3-7a93-49cf-b0fd-28b0eef35325" msprop:DbColumnName="Did" msprop:FriendlyName="Did" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimDate" />
+          <xs:field xpath="Did" />
+        </xs:unique>
+      </xs:element>
+      <xs:annotation>
+        <xs:appinfo>
+          <msdata:Relationship name="FactsGooglePlay-DimDate" msdata:parent="dbo_DimDate" msdata:child="dbo_FactsGooglePlay" msdata:parentkey="Did" msdata:childkey="Did" />
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:schema>
+    <SSIS_x0020_Project xmlns="" />
+  </Schema>
+</DataSourceView>

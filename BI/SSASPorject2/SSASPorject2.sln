@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "SSASPorject2", "SSASPorject2\SSASPorject2.dwproj", "{27511CE5-8B47-4EFF-9FC6-0299968065DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27511CE5-8B47-4EFF-9FC6-0299968065DC}.Development|Default.ActiveCfg = Development
+		{27511CE5-8B47-4EFF-9FC6-0299968065DC}.Development|Default.Build.0 = Development
+		{27511CE5-8B47-4EFF-9FC6-0299968065DC}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D55628EE-F552-4439-BC69-08DD37CADF9A}
+	EndGlobalSection
+EndGlobal

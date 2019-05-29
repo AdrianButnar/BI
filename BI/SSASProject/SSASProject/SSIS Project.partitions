@@ -42,26 +42,6 @@
       </Partitions>
     </MeasureGroup>
     <MeasureGroup>
-      <ID>Dim Review Updated</ID>
-      <Partitions>
-        <Partition dwd:design-time-name="c92a3f2a-fe6a-49b1-abea-0d4ffb957797">
-          <ID>Dim Review Updated</ID>
-          <Name>Dim Review Updated</Name>
-          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
-          <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="ee97e3cb-5397-4ecd-9cf2-5416da60207e">
-            <DataSourceViewID>SSIS Project</DataSourceViewID>
-            <TableID>dbo_DimReviewUpdated</TableID>
-          </Source>
-          <StorageMode>Molap</StorageMode>
-          <CurrentStorageMode>Molap</CurrentStorageMode>
-          <ProcessingMode>Regular</ProcessingMode>
-        </Partition>
-      </Partitions>
-    </MeasureGroup>
-    <MeasureGroup>
       <ID>Facts Google Play</ID>
       <Partitions>
         <Partition dwd:design-time-name="47c8fb09-6c0e-4b8c-8cd7-91a12187e509">

@@ -3,8 +3,8 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
-        <TargetServer>DESKTOP-OTMESSI\LOCALDB#151CFBE5</TargetServer>
-        <TargetDatabase>SSASProject</TargetDatabase>
+        <TargetServer>localhost</TargetServer>
+        <TargetDatabase>SSASPorject2</TargetDatabase>
         <StartObject>
           <ObjectId></ObjectId>
           <ObjectType>Current</ObjectType>
