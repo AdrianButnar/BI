@@ -1,0 +1,536 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="9d21f2ed-3f43-4dff-a1c6-255f5a081f47" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>SSIS Project</ID>
+  <Name>SSIS Project</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="7" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-6720" scrolltop="1996" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="90" x="20257" y="16235" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FactsGooglePlay" left="748" top="4667" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3133" height="4466" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00003d0c000072110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_FactsGooglePlay" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimDate" left="5553" top="7747" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="4466" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000072110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimDate" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimReviewUpdated" left="-5178" top="7078" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3916" height="3747" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00004c0f0000a30e0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimReviewUpdated" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimApplication" left="933" top="15225" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="3027" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000d30b0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimApplication" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3581" top="7931" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="2272" height="919" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__FactsGoogle__Did__01D345B0]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="10" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="5553" y="8330" />
+              <point x="4835" y="8330" />
+              <point x="4835" y="8550" />
+              <point x="3881" y="8550" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="914" top="8833" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="3019" height="6892" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__FactsGoogle__Aid__7FEAFD3E]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="1" sourceattachpoint="8" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="3533" y="15225" />
+              <point x="3533" y="11838" />
+              <point x="1214" y="11838" />
+              <point x="1214" y="9133" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-6720</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>1996</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-5178</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>4667</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>90</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="658236b5-3d57-48f9-8087-25d2d9bfb184">
+      <ID>Dim Application</ID>
+      <Name>Dim Application</Name>
+      <DimensionID>Dim Application</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="919390a8-8ea1-49e4-8b11-71e122badb12">
+          <AttributeID>Aid</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="e3b272d5-9eca-4b4f-a53d-274c58cef0f5">
+      <ID>Dim Date</ID>
+      <Name>Dim Date</Name>
+      <DimensionID>Dim Date</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="5ee07fcc-1d2c-46f8-8496-3de3308bdea0">
+          <AttributeID>Did</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="4420da93-8a8b-4904-b359-e7b9d79a9ef6">
+      <ID>Dim Review Updated</ID>
+      <Name>Dim Review Updated</Name>
+      <DimensionID>Dim Review Updated</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e9c41635-5aaf-40e0-9f0b-a203a3d04a7c">
+          <AttributeID>Rid</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="910a77cb-7986-449b-887e-4c03f73a7c01">
+      <ID>Facts Google Play</ID>
+      <Name>Facts Google Play</Name>
+      <DimensionID>Facts Google Play</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="22a4f2dc-e56f-4742-ae55-d99fa8bc72c8">
+          <AttributeID>Fid</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3ebe19fb-69ef-474c-86a8-2c73291e464b">
+          <AttributeID>Did</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cf7f8578-fa0e-4663-9a07-db80c1540b85">
+          <AttributeID>Aid</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="372cf3df-3557-47e3-9d87-c8b39ace222b">
+      <ID>Dim Application</ID>
+      <Name>Dim Application</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="2dbb195d-b31a-486f-9d27-ecd3e7e53440">
+          <ID>Dim Application Count</ID>
+          <Name>Dim Application Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="c295df17-3874-4c6a-bfb2-768a99f1863f">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="2758e8e3-b7a7-4318-a7a9-2387d800146d">
+              <TableID>dbo_DimApplication</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="74226d1e-ebfb-402d-a64a-893b6c677ca4">
+          <CubeDimensionID>Dim Application</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="eb0ebbbd-d3d3-4802-a316-7ef7e88a199d">
+              <AttributeID>Aid</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="07fbf1fe-5d1f-4cf4-9762-148ba4bc42bd">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="23861608-f19e-4eed-9836-b673f0b2b228">
+                    <TableID>dbo_DimApplication</TableID>
+                    <ColumnID>Aid</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="b3e5a999-4685-4563-acf5-3d60ddf31b8a">
+      <ID>Dim Date</ID>
+      <Name>Dim Date</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="7149b5ad-0652-4e75-bc04-4c7f08d6850a">
+          <ID>Day</ID>
+          <Name>Day</Name>
+          <Source dwd:design-time-name="47f8d805-5379-4cdb-93c2-26a9f86cd5ed">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0ba476cb-0b4a-4607-91d6-f9e48355aa40">
+              <TableID>dbo_DimDate</TableID>
+              <ColumnID>day</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="369ac357-1076-4689-817a-3c11ef3f5762">
+          <ID>Month</ID>
+          <Name>Month</Name>
+          <Source dwd:design-time-name="65de9ba3-b200-45b3-98eb-df590d2fe34a">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="87899ca7-9204-486c-bd5b-5339ba37760b">
+              <TableID>dbo_DimDate</TableID>
+              <ColumnID>month</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="22bf8cb0-2845-40f6-8ee7-f1046fb8f943">
+          <ID>Week</ID>
+          <Name>Week</Name>
+          <Source dwd:design-time-name="acd7bb6f-f5c1-48f7-bc0a-90240b72899b">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="cd6a361d-db88-4a49-b805-a09e8c252666">
+              <TableID>dbo_DimDate</TableID>
+              <ColumnID>week</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="d145de2a-d06e-487f-bbae-469c59217adc">
+          <ID>Day Of Week</ID>
+          <Name>Day Of Week</Name>
+          <Source dwd:design-time-name="620facdc-8288-43cd-9bf0-9425ff28d460">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="5e372ed8-c62c-4e8d-9b2b-21f4706368d8">
+              <TableID>dbo_DimDate</TableID>
+              <ColumnID>DayOfWeek</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="d5cded33-e658-4c9e-8d76-21eadaf0e3ec">
+          <ID>Year</ID>
+          <Name>Year</Name>
+          <Source dwd:design-time-name="5540d8d4-72fb-4a61-9c7e-3daacccb8165">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="7ef54cd7-72c9-4eae-8140-6e65158fb886">
+              <TableID>dbo_DimDate</TableID>
+              <ColumnID>year</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ec584feb-694c-4eda-b251-a6396cc79834">
+          <ID>Dim Date Count</ID>
+          <Name>Dim Date Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="fb0fb541-a0b0-40c4-8af7-e8f0f3dcdfae">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="50397210-fb00-4189-a358-057ca0d045c0">
+              <TableID>dbo_DimDate</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="eac6cfc5-e9df-4741-8257-62d515310479">
+          <CubeDimensionID>Dim Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ef7529a1-135d-4b35-adda-ea86880b6b8d">
+              <AttributeID>Did</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c1b6f569-cfbb-4e32-9b16-c784a46dfa6f">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="78e4647b-ca50-4480-a33e-d3b659ff1ddc">
+                    <TableID>dbo_DimDate</TableID>
+                    <ColumnID>Did</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="58615da3-e10b-4545-a50a-c41e277cdbcb">
+      <ID>Dim Review Updated</ID>
+      <Name>Dim Review Updated</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="5c18e63f-fe94-49fb-a502-90b6218334ca">
+          <ID>Rid</ID>
+          <Name>Rid</Name>
+          <Source dwd:design-time-name="0542e52c-3d83-4873-ad2f-23890b25a6f9">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="af882022-5a4b-410c-b5f5-0b9a18ae7ad3">
+              <TableID>dbo_DimReviewUpdated</TableID>
+              <ColumnID>Rid</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="a3150265-3f45-49d1-b706-a130993d4e18">
+          <ID>Sentiment Code</ID>
+          <Name>Sentiment Code</Name>
+          <Source dwd:design-time-name="47d2c3bf-b351-4f92-8216-3effe16d2dfd">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a5655004-797b-49b7-9c75-7eeebdf7f595">
+              <TableID>dbo_DimReviewUpdated</TableID>
+              <ColumnID>Sentiment_Code</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3d408d5a-cb28-4e66-a9f9-0428ceffec55">
+          <ID>Dim Review Updated Count</ID>
+          <Name>Dim Review Updated Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="c0aada60-8ca5-4aad-8127-8bdedfabb475">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="78bc4568-829f-4334-8444-6ade234d6f0c">
+              <TableID>dbo_DimReviewUpdated</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1c6cbff9-a9db-426d-9e3c-d7ca30bbbc70">
+          <CubeDimensionID>Dim Review Updated</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="337b3b9a-56d7-420a-a577-836b5f797280">
+              <AttributeID>Rid</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="831e3d90-45bd-4e8e-a7b3-c9a1472032d2">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4003dd6d-09b2-4530-961a-fa743151b114">
+                    <TableID>dbo_DimReviewUpdated</TableID>
+                    <ColumnID>Rid</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="edcf5ee6-4839-4836-a0d6-a412d6f77819">
+      <ID>Facts Google Play</ID>
+      <Name>Facts Google Play</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="69c69736-75e9-4b3b-b91d-a80ca5b0edfc">
+          <ID>Profit App</ID>
+          <Name>Profit App</Name>
+          <Source dwd:design-time-name="c38d29e4-934e-427a-8231-64f0e3e3498f">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0c58dcc4-3de1-4122-9376-ec8f108e171e">
+              <TableID>dbo_FactsGooglePlay</TableID>
+              <ColumnID>ProfitApp</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="d1f64d84-195b-49f7-bc12-e78359779666">
+          <ID>Installs</ID>
+          <Name>Installs</Name>
+          <Source dwd:design-time-name="74ff2985-84ea-40c6-a641-d735148e8e43">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ecadb259-9c9e-422b-a9fd-3209ac17ae23">
+              <TableID>dbo_FactsGooglePlay</TableID>
+              <ColumnID>Installs</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3aa11af5-07bc-4978-a456-fb0c68ffe7d3">
+          <ID>Price</ID>
+          <Name>Price</Name>
+          <Source dwd:design-time-name="93b8abb8-a94e-467e-ba29-38db7f0fdf63">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a70e996f-8b69-410c-a4ef-7ce5e7e37664">
+              <TableID>dbo_FactsGooglePlay</TableID>
+              <ColumnID>Price</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="df7e576f-8035-47be-abb5-017f249cc7d5">
+          <ID>Rid - Facts Google Play</ID>
+          <Name>Rid - Facts Google Play</Name>
+          <Source dwd:design-time-name="6447ae01-dc9c-478f-8295-2abc49480812">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="072bdb9d-5435-4faa-9945-aa87903c1906">
+              <TableID>dbo_FactsGooglePlay</TableID>
+              <ColumnID>Rid</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="a5171aa1-70ea-4c77-b5e2-8cdf8dadbc4b">
+          <ID>Facts Google Play Count</ID>
+          <Name>Facts Google Play Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="ba43e33a-2933-465c-8e0e-6cba0526b4e2">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="7f563a7c-60fe-4482-8a51-04e0e37d490c">
+              <TableID>dbo_FactsGooglePlay</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="891a76c6-936d-4726-a492-3a31d90f1404">
+          <CubeDimensionID>Facts Google Play</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2d9bb01c-37c6-43ba-8452-8eeba6a0b569">
+              <AttributeID>Fid</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="dafc23e5-4dc6-47de-95d5-be89f2785bae">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="eddc6cc3-2ebc-42c3-9780-77812d66e59f">
+                    <TableID>dbo_FactsGooglePlay</TableID>
+                    <ColumnID>Fid</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="17d015ac-3db7-4602-9de4-f23f8d714ea1">
+          <CubeDimensionID>Dim Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="62b3e52b-8583-4713-8583-e9a2e0e3173b">
+              <AttributeID>Did</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="73cb2e99-e883-4619-be36-7e8656380963">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a4ea1653-fb84-4018-a768-fcd3c1625f7d">
+                    <TableID>dbo_FactsGooglePlay</TableID>
+                    <ColumnID>Did</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="9e49189e-2e24-45bc-b079-10658b6d78ea">
+          <CubeDimensionID>Dim Application</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="03f5fa0d-d697-43ad-9fa2-0c2ec84637b4">
+              <AttributeID>Aid</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c64732d6-82e8-4ef8-a97d-15fb365a4bd2">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="927cccc9-c069-4c25-9eb3-31cb222e3d4c">
+                    <TableID>dbo_FactsGooglePlay</TableID>
+                    <ColumnID>Aid</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="ff665cb0-9235-4dcc-a91e-4174a91ff10e">
+    <DataSourceViewID>SSIS Project</DataSourceViewID>
+  </Source>
+</Cube>
